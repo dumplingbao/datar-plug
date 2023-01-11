@@ -1,0 +1,65 @@
+<html>
+    <head>
+      <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+      <link href="./dist/dumplingbao.3dmap.min.css" rel="stylesheet" type="text/css" />
+    </head>
+    <script src="./dist/dumplingbao.3dmap.min.js"></script>
+
+  <body>
+    <div id="container"></div>
+    <script>
+      let f1 = new dumplingbaoThree.Map(
+        document.getElementById('container'),
+        {
+          data: {
+            // 城市数据
+            cityData:
+              [
+                {
+                    city: "青岛",
+                    value: 100,
+                    EN: [120.3844, 36.1052],//经纬度
+                },
+                {
+                    city: "日照",
+                    value: 80,
+                    EN: [119.5072, 35.4202],
+                },
+                {
+                    city: "临沂",
+                    value: 90,
+                    EN: [118.33, 35.33],
+                },
+                {
+                    city: "济南",
+                    value: 89,
+                    EN: [117.00, 36.40],
+                }
+            ]
+          }
+        },
+        {
+          // config: {
+          //   mapJson: 'https://geo.datav.aliyun.com/areas_v3/bound/370000_full.json',
+          //   valueMax: 100,
+          //   level: 3,
+          //   longitude: 118.77,
+          //   latitude: 36.40
+          // },
+          config: {
+            // 地图json地址
+            mapJson: 'https://geo.datav.aliyun.com/areas_v3/bound/100000_full.json',
+            // 基准值，推进样本数据最大值
+            valueMax: 100,
+            // 缩放级别
+            level: 16,
+            // 中心坐标经度
+            longitude: 105.11,
+             // 中心坐标纬度
+            latitude: 35.98
+          },
+        }
+      );
+    </script>
+  </body>
+</html>
